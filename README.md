@@ -1,4 +1,4 @@
-# streamlit multi page's test
+# streamlit_multi_page
 streamlitのマルチページのテストコードです。
 
 ## 起動手順

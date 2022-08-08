@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  streamlit:
+    env_file: ./.env.development
+    # restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "streamlit_multi_page"
+    working_dir: '/usr/src/app'
+    image: "streamlit_multi_page"
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./src:/usr/src/app/src
+    command: streamlit run src/01_page1.py
